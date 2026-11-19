@@ -12,7 +12,7 @@
    10. Страницы: контакты, отзывы
    11. Плавающие кнопки
    12. Адаптив
-   13. НОВЫЕ ЭКРАНЫ: как заказать, доставка, отзывы на главной
+   13. Новые экраны: как заказать, доставка, отзывы на главной
    ========================================================================== */
 
 /* ==========================================================================
@@ -296,11 +296,19 @@ a:focus-visible {
   border-top: 1px solid var(--color-primary-dark);
   padding-top: var(--space-md);
   background-color: var(--color-surface);
+  overflow-x: auto;
+  /* Убираем стандартный скроллбар для красоты */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none; /* Chrome, Safari и Opera */
 }
 
 .site-nav__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Запрещаем перенос строк */
   justify-content: center;
   align-items: center;
   gap: var(--space-md);
@@ -315,6 +323,7 @@ a:focus-visible {
   color: var(--color-primary);
   text-decoration: none;
   border-radius: var(--radius-sm);
+  white-space: nowrap; /* Запрещаем перенос текста внутри кнопки */
 }
 
 .site-nav__link:hover,
@@ -487,11 +496,6 @@ a:focus-visible {
   font-weight: 700;
 }
 
-.product-card__button {
-  margin-top: auto;
-  align-self: flex-start;
-}
-
 /* Кнопка «В избранное» */
 .product-card__favorite {
   position: absolute;
@@ -555,38 +559,32 @@ a:focus-visible {
     transform: scale(1);
   }
 }
-/* Кнопки в карточке товара: Подробно слева, Заказать справа */
+
+/* Кнопки в карточке товара (Подробно и Заказать) */
 .product-card__actions {
   margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-sm);
+  flex-wrap: nowrap; /* Всегда в одну строку */
 }
 
 .product-card__details,
 .product-card__button {
-  flex: 0 0 auto;
-}
-
-.product-card__details {
-  padding: 8px 14px;
+  flex: 1 1 0; /* Равномерно делят пространство 50/50 */
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-xs);
   font-size: 14px;
 }
 
-/* На узких экранах — в столбик, Заказать сверху */
-@media (max-width: 480px) {
-  .product-card__actions {
-    flex-direction: column-reverse;
-    align-items: stretch;
-  }
-
-  .product-card__details,
-  .product-card__button {
-    width: 100%;
-    text-align: center;
-  }
-}
 /* --- Страница товара (product.html) --- */
 .product-page {
   display: grid;
@@ -637,12 +635,6 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
-}
-
-@media (max-width: 700px) {
-  .product-page {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Каталог: раскладка и фильтры */
@@ -1557,6 +1549,19 @@ a:focus-visible {
   .site-header__left {
     gap: var(--space-md);
   }
+
+  .site-nav__list {
+    gap: var(--space-xs); /* Уменьшаем расстояние между пунктами */
+  }
+
+  .site-nav__link {
+    padding: var(--space-xs) var(--space-sm); /* Уменьшаем кнопки */
+    font-size: 14px; /* Чуть уменьшаем шрифт */
+  }
+
+  .product-page {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1588,7 +1593,15 @@ a:focus-visible {
     width: 100%;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
+
+  /* На очень узких экранах для кнопок карточки */
+  .product-card__details,
+  .product-card__button {
+    padding: var(--space-xs) var(--space-xs);
+    font-size: 13px;
+  }
 }
+
 /* ==========================================================================
    13. НОВЫЕ ЭКРАНЫ: как заказать, доставка, отзывы на главной
    ========================================================================== */

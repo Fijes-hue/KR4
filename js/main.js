@@ -24,7 +24,6 @@ orderButtons.forEach((button) => {
   });
 });
 
-// Закрываем модальное окно по кнопке «Закрыть».
 closeDialogButton.addEventListener("click", () => {
   orderDialog.close();
 });
@@ -40,7 +39,6 @@ orderForm.addEventListener("submit", (event) => {
   // потому что backend пока не подключён.
   event.preventDefault();
 
-  // Сбрасываем предыдущие признаки ошибок.
   const formElements = Array.from(orderForm.elements);
 
   formElements.forEach((element) => {
@@ -49,7 +47,6 @@ orderForm.addEventListener("submit", (event) => {
     }
   });
 
-  // Проверяем встроенные HTML-ограничения формы.
   if (!orderForm.checkValidity()) {
     formElements.forEach((element) => {
       if (element.willValidate && !element.checkValidity()) {
@@ -57,17 +54,13 @@ orderForm.addEventListener("submit", (event) => {
       }
     });
 
-    // Показываем стандартные сообщения браузера.
     orderForm.reportValidity();
     return;
   }
 
-  // Показываем сообщение об успешной отправке.
   successMessage.hidden = false;
 
-  // Очищаем форму.
   orderForm.reset();
 
-  // Закрываем модальное окно.
   orderDialog.close();
 });
