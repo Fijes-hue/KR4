@@ -64,3 +64,29 @@ orderForm.addEventListener("submit", (event) => {
 
   orderDialog.close();
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const orderDialog = document.getElementById("order-dialog");
+  const openOrderBtn = document.getElementById("open-order-dialog");
+  const closeOrderBtn = document.getElementById("close-order-dialog");
+
+  if (openOrderBtn && orderDialog) {
+    openOrderBtn.addEventListener("click", () => {
+      orderDialog.showModal();
+    });
+  }
+
+  if (closeOrderBtn && orderDialog) {
+    closeOrderBtn.addEventListener("click", () => {
+      orderDialog.close();
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  // Проверяем, есть ли в URL хэш #order-dialog
+  if (window.location.hash === "#order-dialog") {
+    const dialog = document.getElementById("order-dialog");
+    if (dialog) {
+      dialog.showModal();
+    }
+  }
+});
