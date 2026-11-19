@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Учебный интернет-магазин — главная страница."
+    />
+    <title>Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__left">
+          <a class="site-header__logo" href="index.html">
+            <img src="images/lOGO.jpeg" alt="" class="site-header__logo-img" />
+            <span class="site-header__logo-text">ShopChop</span>
+          </a>
+          <form
+            class="site-header__search"
+            action="catalog.html"
+            method="get"
+            role="search"
+          >
+            <input
+              class="site-header__search-input"
+              type="search"
+              name="q"
+              placeholder="Например: протеин"
+              aria-label="Поиск товаров"
+            />
+            <button
+              class="site-header__search-btn button button--primary"
+              type="submit"
+            >
+              Найти
+            </button>
+          </form>
+          <div class="site-header__actions">
+            <div class="site-header__contacts">
+              <a class="site-header__phone" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+            </div>
+            <a
+              class="header-action"
+              href="#favorites-modal"
+              aria-label="Избранное"
+              title="Избранное"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+              <span class="header-action__badge">3</span>
+            </a>
+
+            <a
+              class="header-action"
+              href="#account-modal"
+              aria-label="Личный кабинет"
+              title="Личный кабинет"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="about.html">O нас</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <h1 class="hero__title">
+          Магазин ShopChop - магазин для настоящего баскетболиста
+        </h1>
+        <p class="hero__text">
+          ShopChop - место, где можно приобрести с доставкой все для игры в
+          баскетболл, начиная от сеток, заканчивая сортивным питанием.
+        </p>
+        <a class="button button--primary" href="#popular">Перейти к товарам</a>
+      </section>
+
+      <section class="section" id="advantages">
+        <h2 class="section__title">Наши преимущества</h2>
+        <ul class="advantages-list">
+          <li class="advantages-list__item">Быстрая доставка</li>
+          <li class="advantages-list__item">Большой каталог товаров</li>
+          <li class="advantages-list__item">
+            Работа с поставщиками из США,Канады и других стран
+          </li>
+          <li class="advantages-list__item">
+            Довольные пользователи и покупатели
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="popular">
+        <h2 class="section__title">Популярные товары</h2>
+
+        <div class="products-grid">
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/jordan_ball.jpeg" class="product-image" />
+            <h3 class="product-card__title">Баскетбольный мяч - Jordan</h3>
+            <p class="product-card__description">
+              Баксетбольный мяч. Размер: 7. Подходит для корта
+            </p>
+            <p class="product-card__price">Цена: 7 980 руб.</p>
+            <button
+              class="button button--primary product-card__button"
+              type="button"
+              data-product="Товар 1"
+            >
+              Заказать
+            </button>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/Spalding_ball.jpeg" class="product-image" />
+            <h3 class="product-card__title">Баскетбольный мяч - Spalding</h3>
+            <p class="product-card__description">
+              Баксетбольный мяч. Размер: 7. Подходит для корта и уличного
+              покрытия
+            </p>
+            <p class="product-card__price">Цена: 5 500 руб.</p>
+            <button
+              class="button button--primary product-card__button"
+              type="button"
+              data-product="Товар 2"
+            >
+              Заказать
+            </button>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/wilson_ball.jpeg" class="product-image" />
+            <h3 class="product-card__title">Баскетбольный мяч - Wilson</h3>
+            <p class="product-card__description">
+              Баксетбольный мяч. Размер: 6,5. Подходит для корта и уличного
+              покрытия
+            </p>
+            <p class="product-card__price">Цена: 6 225 руб.</p>
+            <button
+              class="button button--primary product-card__button"
+              type="button"
+              data-product="Товар 3"
+            >
+              Заказать
+            </button>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/bag.webp" class="product-image" />
+            <h3 class="product-card__title">Мешок для мячей</h3>
+            <p class="product-card__description">
+              Вместительный мешок для мячей. Хорош для тренировок в зале
+            </p>
+            <p class="product-card__price">Цена: 1 500 руб.</p>
+            <button
+              class="button button--primary product-card__button"
+              type="button"
+              data-product="Товар 4"
+            >
+              Заказать
+            </button>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/AirJordan.jpeg" class="product-image" />
+            <h3 class="product-card__title">
+              Мужские кроссовки Jordan 6 Retro
+            </h3>
+            <p class="product-card__description">
+              Кроссовки 6 Retro от Jordan в в уникальной расцветке "Olympic"
+              образца 2024-го года
+            </p>
+            <p class="product-card__price">Цена: 7 550 руб.</p>
+            <button
+              class="button button--primary product-card__button"
+              type="button"
+              data-product="Товар 5"
+            >
+              Заказать
+            </button>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/forma.jpeg" class="product-image" />
+            <h3 class="product-card__title">Форма NIKE баскетбольная</h3>
+            <p class="product-card__description">
+              Баскетбольная форма Nike White Black
+            </p>
+            <p class="product-card__price">Цена: 600 руб.</p>
+            <button
+              class="button button--primary product-card__button"
+              type="button"
+              data-product="Товар 6"
+            >
+              Заказать
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <aside class="aside-info">
+        <h2 class="aside-info__title">Информация для клубов</h2>
+        <p class="aside-info__text">
+          Для наших постояных покупателей и баскетбольных клубов мы предлагаем
+          скидки в размере 20%, если имеете карту постоянного покупателя и
+          совершаете покупки от 10 000р.
+        </p>
+      </aside>
+      <!-- ЭКРАН 1: Как сделать заказ (3 шага) -->
+      <section class="section" id="how-to-order">
+        <h2 class="section__title">Как сделать заказ</h2>
+        <p class="section__subtitle">Три простых шага до новой экипировки</p>
+
+        <ol class="steps-list">
+          <li class="steps-list__item">
+            <span class="steps-list__num" aria-hidden="true">1</span>
+            <div class="steps-list__body">
+              <h3 class="steps-list__title">Выберите товар</h3>
+              <p class="steps-list__text">
+                Откройте каталог, сравните характеристики и добавьте нужное в
+                избранное. Если сомневаетесь — напишите консультанту.
+              </p>
+            </div>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__num" aria-hidden="true">2</span>
+            <div class="steps-list__body">
+              <h3 class="steps-list__title">Оформите заявку</h3>
+              <p class="steps-list__text">
+                Нажмите «Заказать», укажите имя, телефон и удобную дату связи.
+                Мы перезвоним, подтвердим наличие и поможем с размером.
+              </p>
+            </div>
+          </li>
+          <li class="steps-list__item">
+            <span class="steps-list__num" aria-hidden="true">3</span>
+            <div class="steps-list__body">
+              <h3 class="steps-list__title">Получите доставку</h3>
+              <p class="steps-list__text">
+                Отправляем по Москве в день заказа, по России — курьерскими
+                службами. Оплата при получении или онлайн — на ваш выбор.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="section__actions">
+          <a class="button button--primary" href="catalog.html"
+            >Перейти в каталог</a
+          >
+        </div>
+      </section>
+
+      <!-- ЭКРАН 2: Доставка и оплата -->
+      <section class="section" id="delivery">
+        <h2 class="section__title">Доставка и оплата</h2>
+        <p class="section__subtitle">Наши условия доставки</p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3 class="info-card__title">Доставка по Москве</h3>
+            <ul class="info-card__list">
+              <li>Курьером — 300 ₽, бесплатно от 5 000 ₽</li>
+              <li>В день заказа при оформлении до 14:00</li>
+              <li>Самовывоз из ТРК «Европолис» — бесплатно</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Доставка по России</h3>
+            <ul class="info-card__list">
+              <li>СДЭК / Почта России — от 350 ₽</li>
+              <li>Срок — 2–7 дней в зависимости от региона</li>
+              <li>Бесплатно при заказе от 10 000 ₽</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Способы оплаты</h3>
+            <ul class="info-card__list">
+              <li>Банковской картой онлайн</li>
+              <li>СБП по QR-коду</li>
+              <li>Наличными или картой при получении</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Возврат и обмен</h3>
+            <ul class="info-card__list">
+              <li>14 дней на возврат с момента получения</li>
+              <li>Товар без следов использования, с ярлыками</li>
+              <li>Обмен размера — бесплатно один раз</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ЭКРАН 3: Отзывы покупателей -->
+      <section class="section" id="reviews">
+        <h2 class="section__title">Отзывы покупателей</h2>
+        <p class="section__subtitle">Что говорят наши пользователи о товарах</p>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-card__head">
+              <h3 class="review-card__name">Алексей</h3>
+              <p class="review-card__date">12 ноября 2026</p>
+            </div>
+            <p class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+            <p class="review-card__text">
+              Заказывал кроссовки Jordan 6 Retro — пришли за день, размер
+              подошёл идеально. Консультант помог выбрать по длине стопы, очень
+              доволен.
+            </p>
+            <p class="review-card__product">Товар: Jordan 6 Retro «Olympic»</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__head">
+              <h3 class="review-card__name">Мария</h3>
+              <p class="review-card__date">5 ноября 2026</p>
+            </div>
+            <p class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+            <p class="review-card__text">
+              Берём мячи и форму для секции. Отдельное спасибо за скидку для
+              клубов — экономия ощутимая, а качество стабильное.
+            </p>
+            <p class="review-card__product">Товар: мяч Spalding</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__head">
+              <h3 class="review-card__name">Дмитрий</h3>
+              <p class="review-card__date">28 октября 2026</p>
+            </div>
+            <p class="review-card__stars" aria-label="Оценка 4 из 5">★★★★☆</p>
+            <p class="review-card__text">
+              Взял уличный мяч Spalding — держит покрытие отлично. Единственное,
+              хотелось бы больше расцветок в наличии, но в целом всё супер.
+            </p>
+            <p class="review-card__product">Товар: мяч Spalding</p>
+          </article>
+        </div>
+
+        <div class="section__actions">
+          <a class="button button--secondary" href="reviews.html">
+            Читать все отзывы
+          </a>
+        </div>
+      </section>
+
+      <!-- Блок вопросы ответы -->
+      <section class="section" id="faq">
+        <h2 class="section__title">Часто задаваемые вопросы</h2>
+        <p class="section__subtitle">Ответы на вопросы</p>
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              «Как правильно подобрать размер баскетбольных кроссовок?»
+            </summary>
+            <p class="faq-item__answer">
+              Ориентируйтесь на размерную сетку конкретного бренда — у разных
+              производителей она может отличаться. Лучше всего измерить длину
+              стопы в сантиметрах и сравнить с таблицей размеров на странице
+              товара. Для баскетбольных кроссовок рекомендуется оставлять
+              небольшой запас (примерно 0,5–1 см) для комфорта и плотного
+              шнурования. Если сомневаетесь, напишите нам параметры
+              стопы — поможем с выбором.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Какие товары обязательно нужны начинающему баскетболисту?
+            </summary>
+            <p class="faq-item__answer">
+              Минимальный набор: баскетбольные кроссовки с хорошей амортизацией
+              и поддержкой голеностопа, форма (шорты и майка из дышащей ткани),
+              носки для спорта (лучше с усилением в зонах нагрузки) и мяч
+              подходящего размера (для взрослых — размер 7, для подростков — 6,
+              для детей — 5). Дополнительно пригодятся компрессионные рукава,
+              наколенники и сумка для инвентаря.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Чем отличаются мячи для зала и для улицы?
+            </summary>
+            <p class="faq-item__answer">
+              Мячи для зала обычно делают из кожи или мягкой синтетики — они
+              дают лучшее сцепление в помещении, но быстро изнашиваются на
+              асфальте. Уличные мячи имеют более прочную резиновую поверхность,
+              устойчивую к истиранию и влаге. Универсальные модели подходят для
+              обоих покрытий, но уступают специализированным по долговечности и
+              ощущениям.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Можно ли вернуть или обменять товар, если не подошёл размер?
+            </summary>
+            <p class="faq-item__answer">
+              Да, вы можете вернуть или обменять товар в течение 14 дней с
+              момента получения, если он не был в использовании и сохранены
+              упаковка и ярлыки. Для оформления возврата свяжитесь с нашей
+              службой поддержки — мы подскажем порядок действий.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Как ухаживать за баскетбольной экипировкой, чтобы она прослужила
+              дольше?
+            </summary>
+            <p class="faq-item__answer">
+              Кроссовки после каждой тренировки протирайте снаружи влажной
+              тканью, а внутри используйте специальные дезодоранты или
+              вкладывайте сушильные шарики. Стирать кроссовки в машинке не
+              рекомендуется. Форму стирайте при температуре не выше 30–40 °C,
+              избегая агрессивных отбеливателей. Мяч протирайте от пыли и влаги,
+              не оставляйте надолго под прямыми солнечными лучами или на
+              морозе — это портит покрытие.
+            </p>
+          </details>
+        </div>
+      </section>
+      <!-- Окно справа, выезжает вверх -->
+      <div
+        class="popup"
+        id="support-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="support-drawer-title"
+      >
+        <a class="popup__overlay" href="#" aria-label="Закрыть"></a>
+
+        <div class="popup__panel" role="document">
+          <a class="popup__close" href="#" aria-label="Закрыть">&times;</a>
+
+          <h2 class="popup__title" id="support-drawer-title">Поддержка</h2>
+
+          <hr class="popup__divider" />
+
+          <!-- Написать консультанту -->
+          <form class="popup__form" action="#" method="post">
+            <h3 class="popup__subtitle">Написать консультанту</h3>
+
+            <div class="popup__field">
+              <label class="popup__label" for="popup-name">Ваше имя</label>
+              <input
+                class="popup__input"
+                id="popup-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                placeholder="Иван"
+              />
+            </div>
+
+            <div class="popup__field">
+              <label class="popup__label" for="popup-contact"
+                >Телефон или e-mail</label
+              >
+              <input
+                class="popup__input"
+                id="popup-contact"
+                name="contact"
+                type="text"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div class="popup__field">
+              <label class="popup__label" for="popup-message">Сообщение</label>
+              <textarea
+                class="popup__input popup__textarea"
+                id="popup-message"
+                name="message"
+                rows="4"
+                required
+                placeholder="Чем можем помочь?"
+              ></textarea>
+            </div>
+
+            <button class="button button--primary" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- 1. Лого и текст -->
+        <div class="site-footer__col site-footer__col--brand">
+          <a class="site-footer__logo" href="index.html">
+            <img
+              class="site-footer__logo-img"
+              src="images/lOGO.jpeg"
+              width="40"
+              height="40"
+              alt="Логотип ShopChop"
+            />
+            <span class="site-footer__logo-text site-footer__title"
+              >ShopChop</span
+            >
+          </a>
+          <p class="site-footer__slogan">
+            ShopChop интернет-магазин для настоящих баскетболистов: экипировка,
+            инвентарь и спортивное питание с доставкой по России.
+          </p>
+        </div>
+
+        <!-- 2. Разделы -->
+        <div class="site-footer__col site-footer__col--nav">
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__nav">
+            <li><a class="site-footer__link" href="index.html">Главная</a></li>
+            <li>
+              <a class="site-footer__link" href="catalog.html">Каталог</a>
+            </li>
+            <li><a class="site-footer__link" href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Контакты -->
+        <div class="site-footer__col site-footer__col--contacts">
+          <h2 class="site-footer__title">Контакты</h2>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Адрес:</span>
+            <span class="site-footer__address"
+              >ТРК «Европолис», проспект Мира, 211, корпус 2, Москва</span
+            >
+          </p>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Телефон:</span>
+            <span class="site-footer__phone-row">
+              <a class="site-footer__link" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+              <a
+                class="site-footer__phone-info"
+                href="#phone-hours"
+                aria-label="Показать часы работы телефона"
+                title="Когда можно позвонить"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"
+                  />
+                </svg>
+              </a>
+            </span>
+          </p>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--mail"
+              href="mailto:info@shopchop.ru"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.4l8 5 8-5V7H4zm0 2.6V17h16V9.6l-7.45 4.66a1 1 0 0 1-1.1 0L4 9.6z"
+                />
+              </svg>
+              E-mail
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Соцсети -->
+        <div class="site-footer__col site-footer__col--social">
+          <h2 class="site-footer__title">Мы в соцсетях</h2>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--vk"
+              href="https://vk.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M13.16 17.5c-5.1 0-8.02-3.5-8.14-9.32h2.56c.08 4.27 1.98 6.08 3.48 6.45V8.18h2.4v3.68c1.48-.16 3.03-1.85 3.56-3.68h2.4a7.15 7.15 0 0 1-3.28 4.63 7.4 7.4 0 0 1 3.85 4.69h-2.65c-.5-1.76-1.93-3.12-3.88-3.31v3.31h-.3z"
+                />
+              </svg>
+              ВКонтакте
+            </a>
+            <a
+              class="site-footer__social-btn site-footer__social-btn--tg"
+              href="https://t.me/shopchop"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.04 15.47 8.9 19.1c.44 0 .63-.19.86-.41l2.06-1.98 4.27 3.13c.78.43 1.34.2 1.55-.72l2.8-13.1c.25-1.15-.42-1.6-1.17-1.32L2.2 9.9c-1.12.44-1.11 1.07-.19 1.35l4.53 1.42L17.06 6.3c.5-.33.96-.15.58.18z"
+                />
+              </svg>
+              Telegram
+            </a>
+          </div>
+          <p class="site-footer__slogan">Пишите — ответим в рабочее время.</p>
+        </div>
+      </div>
+      <p class="site-footer__text">&copy; 2026 ShopChop. Все права защищены.</p>
+    </footer>
+    <!-- Сообщение: часы работы телефона -->
+    <div
+      class="phone-hours"
+      id="phone-hours"
+      role="dialog"
+      aria-labelledby="phone-hours-title"
+    >
+      <a class="phone-hours__overlay" href="#" aria-label="Закрыть"></a>
+
+      <div class="phone-hours__box" role="document">
+        <a class="phone-hours__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="phone-hours__title" id="phone-hours-title">
+          Когда можно позвонить
+        </h2>
+        <p class="phone-hours__text">
+          Пн–Пт: с 9:00 до 20:00<br />
+          Сб–Вс: с 10:00 до 18:00
+        </p>
+        <p class="phone-hours__text">
+          Вне этого времени оставьте заявку через форму — мы перезвоним.
+        </p>
+      </div>
+    </div>
+
+    <!-- Модальное окно: Избранное -->
+    <div
+      class="modal"
+      id="favorites-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="favorites-modal-title"
+    >
+      <a class="modal__overlay" href="#" aria-label="Закрыть"></a>
+      <div class="modal__content" role="document">
+        <a class="modal__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="modal__title" id="favorites-modal-title">Избранное</h2>
+        <p class="modal__text">Товаров в избранном: <strong>3</strong></p>
+        <ul class="favorites-list">
+          <li class="favorites-list__item">
+            <span class="favorites-list__name">Товар 1 — Креатин</span>
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+          <li class="favorites-list__item">
+            <span class="favorites-list__name">Товар 2 — Протеин</span>
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+          <li class="favorites-list__item">
+            <span class="favorites-list__name"
+              >Товар 4 — Изотоник "Primeraft"</span
+            >
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Модальное окно: Личный кабинет -->
+    <div
+      class="modal"
+      id="account-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="account-modal-title"
+    >
+      <a class="modal__overlay" href="#" aria-label="Закрыть"></a>
+      <div class="modal__content" role="document">
+        <a class="modal__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="modal__title" id="account-modal-title">Личный кабинет</h2>
+
+        <form class="login-form" action="#" method="post">
+          <div class="login-form__field">
+            <label class="login-form__label" for="login-email"
+              >Логин (e-mail)</label
+            >
+            <input
+              class="login-form__input"
+              id="login-email"
+              name="login"
+              type="email"
+              autocomplete="username"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="login-form__field">
+            <label class="login-form__label" for="login-password">Пароль</label>
+            <input
+              class="login-form__input"
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              minlength="6"
+              placeholder="Минимум 6 символов"
+            />
+          </div>
+
+          <div class="login-form__actions">
+            <button class="button button--primary" type="submit">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <dialog
+      class="order-dialog"
+      id="order-dialog"
+      aria-labelledby="order-dialog-title"
+    >
+      <h2 class="order-dialog__title" id="order-dialog-title">
+        Оформление заявки
+      </h2>
+
+      <form
+        class="order-form"
+        id="order-form"
+        action="#"
+        method="post"
+        novalidate
+      >
+        <input type="hidden" id="selected-product" name="selected-product" />
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-name">Имя</label>
+          <input
+            class="order-form__input"
+            id="order-name"
+            name="name"
+            type="text"
+            required
+          />
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-email">E-mail</label>
+          <input
+            class="order-form__input"
+            id="order-email"
+            name="email"
+            type="email"
+            placeholder="example@mail.ru"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-phone">Телефон</label>
+          <input
+            class="order-form__input"
+            id="order-phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            placeholder="+7 (900) 000-00-00"
+            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            required
+          />
+          <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-date">Дата связи</label>
+          <input
+            class="order-form__input"
+            id="order-date"
+            name="date"
+            type="date"
+          />
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-topic">Тема заявки</label>
+          <select
+            class="order-form__select"
+            id="order-topic"
+            name="topic"
+            required
+          >
+            <option value="">Выберите тему</option>
+            <option value="product">Заказ товара</option>
+            <option value="consultation">Консультация</option>
+            <option value="delivery">Доставка</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-comment"
+            >Комментарий</label
+          >
+          <textarea
+            class="order-form__textarea"
+            id="order-comment"
+            name="comment"
+            rows="4"
+            placeholder="Укажите дополнительную информацию"
+          ></textarea>
+        </div>
+
+        <div class="order-form__field order-form__field--checkbox">
+          <label class="order-form__label order-form__label--checkbox">
+            <input
+              class="order-form__checkbox"
+              id="order-agreement"
+              name="agreement"
+              type="checkbox"
+              required
+            />
+            Я согласен на обработку данных
+          </label>
+        </div>
+
+        <div class="order-form__actions">
+          <button
+            class="button button--secondary"
+            type="button"
+            id="close-order-dialog"
+          >
+            Закрыть
+          </button>
+          <button class="button button--primary" type="submit">
+            Отправить заявку
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <a href="#top" class="btn-top" aria-label="Вернуться наверх">Up</a>
+
+    <p class="success-message" id="success-message" hidden>
+      Форма успешно отправлена!
+    </p>
+    <a
+      href="#support-drawer"
+      class="support-fab"
+      aria-label="Написать консультанту"
+    >
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <!-- Иконка чата -->
+        <path
+          d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+        />
+      </svg>
+    </a>
+  </body>
+</html>

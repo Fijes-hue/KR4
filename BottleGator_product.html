@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Подробное описание товара — учебный интернет-магазин ShopChop."
+    />
+    <title>Баскетбольный мяч Spalding — ShopChop</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__left">
+          <a class="site-header__logo" href="index.html">
+            <img src="images/lOGO.jpeg" alt="" class="site-header__logo-img" />
+            <span class="site-header__logo-text">ShopChop</span>
+          </a>
+          <form
+            class="site-header__search"
+            action="catalog.html"
+            method="get"
+            role="search"
+          >
+            <input
+              class="site-header__search-input"
+              type="search"
+              name="q"
+              placeholder="Например: протеин"
+              aria-label="Поиск товаров"
+            />
+            <button
+              class="site-header__search-btn button button--primary"
+              type="submit"
+            >
+              Найти
+            </button>
+          </form>
+          <div class="site-header__actions">
+            <div class="site-header__contacts">
+              <a class="site-header__phone" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+            </div>
+            <a
+              class="header-action"
+              href="#favorites-modal"
+              aria-label="Избранное"
+              title="Избранное"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+              <span class="header-action__badge">3</span>
+            </a>
+            <a
+              class="header-action"
+              href="#account-modal"
+              aria-label="Личный кабинет"
+              title="Личный кабинет"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="catalog.html"
+                >Каталог</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="about.html">O нас</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+        <span class="breadcrumbs__current">
+          Бутылка для питьевой воды «Gatorade»</span
+        >
+      </nav>
+      <section class="section product-page">
+        <div class="product-page__media">
+          <img
+            src="images/gatorate.jpeg"
+            alt="Бутылка для воды Gatorade"
+            class="product-page__image"
+          />
+        </div>
+
+        <div class="product-page__info">
+          <h1 class="product-page__title">
+            Бутылка для питьевой воды «Gatorade»
+          </h1>
+          <p class="product-page__price">320 руб.</p>
+
+          <ul class="product-page__specs">
+            <li><strong>Объём:</strong> 750 мл</li>
+            <li><strong>Материал:</strong> прочный пищевой пластик без BPA</li>
+            <li>
+              <strong>Особенности:</strong> герметичная крышка, удобный хват,
+              нескользящее покрытие
+            </li>
+            <li>
+              <strong>Назначение:</strong> хранение и употребление воды и
+              изотоников на площадке
+            </li>
+          </ul>
+
+          <p class="product-page__text">
+            Бутылка Gatorade создана для активного использования: герметичная
+            крышка не прольётся в сумке, а эргономичный корпус удобно лежит в
+            руке даже во время тайм‑аутов. Объём 750 мл оптимален для
+            восполнения жидкости в перерывах между четвертями. Нескользящее
+            покрытие помогает надёжно удерживать бутылку при резких движениях.
+          </p>
+
+          <div class="product-page__actions">
+            <a class="button button--secondary" href="catalog.html"
+              >Назад в каталог</a
+            >
+            <button
+              class="button button--primary"
+              type="button"
+              data-product="Бутылка Gatorade"
+            >
+              Заказать
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Кратко о товаре</h2>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3 class="info-card__title">Для чего подходит</h3>
+            <p class="info-card__text">
+              Тренировки, матчи, поддержание водного баланса на площадке.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3 class="info-card__title">Как ухаживать</h3>
+            <p class="info-card__text">
+              Мыть после каждого использования, не оставлять воду надолго,
+              сушить в открытом виде.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3 class="info-card__title">Комплектация</h3>
+            <p class="info-card__text">Бутылка — 1 шт., крышка — 1 шт.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__col site-footer__col--brand">
+          <a class="site-footer__logo" href="index.html">
+            <img
+              class="site-footer__logo-img"
+              src="images/lOGO.jpeg"
+              width="40"
+              height="40"
+              alt="Логотип ShopChop"
+            />
+            <span class="site-footer__logo-text site-footer__title"
+              >ShopChop</span
+            >
+          </a>
+          <p class="site-footer__slogan">
+            ShopChop интернет-магазин для настоящих баскетболистов: экипировка,
+            инвентарь и спортивное питание с доставкой по России.
+          </p>
+        </div>
+
+        <div class="site-footer__col site-footer__col--nav">
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__nav">
+            <li><a class="site-footer__link" href="index.html">Главная</a></li>
+            <li>
+              <a class="site-footer__link" href="catalog.html">Каталог</a>
+            </li>
+            <li><a class="site-footer__link" href="about.html">О нас</a></li>
+            <li>
+              <a class="site-footer__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col site-footer__col--contacts">
+          <h2 class="site-footer__title">Контакты</h2>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Адрес:</span>
+            <span class="site-footer__address"
+              >ТРК «Европолис», проспект Мира, 211, корпус 2, Москва</span
+            >
+          </p>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Телефон:</span>
+            <span class="site-footer__phone-row">
+              <a class="site-footer__link" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+              <a
+                class="site-footer__phone-info"
+                href="#phone-hours"
+                aria-label="Показать часы работы телефона"
+                title="Когда можно позвонить"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"
+                  />
+                </svg>
+              </a>
+            </span>
+          </p>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--mail"
+              href="mailto:info@shopchop.ru"
+            >
+              E-mail
+            </a>
+          </div>
+        </div>
+
+        <div class="site-footer__col site-footer__col--social">
+          <h2 class="site-footer__title">Мы в соцсетях</h2>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--vk"
+              href="https://vk.com"
+              target="_blank"
+              rel="noopener"
+              >ВКонтакте</a
+            >
+            <a
+              class="site-footer__social-btn site-footer__social-btn--tg"
+              href="https://t.me/shopchop"
+              target="_blank"
+              rel="noopener"
+              >Telegram</a
+            >
+          </div>
+          <p class="site-footer__slogan">Пишите — ответим в рабочее время.</p>
+        </div>
+      </div>
+      <p class="site-footer__text">&copy; 2026 ShopChop. Все права защищены.</p>
+    </footer>
+
+    <a href="#top" class="btn-top" aria-label="Вернуться наверх">Up</a>
+  </body>
+</html>

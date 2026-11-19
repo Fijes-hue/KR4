@@ -1,0 +1,1194 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Каталог товаров учебного интернет-магазина."
+    />
+    <title>Каталог товаров — Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__left">
+          <a class="site-header__logo" href="index.html">
+            <img src="images/lOGO.jpeg" alt="" class="site-header__logo-img" />
+            <span class="site-header__logo-text">ShopChop</span>
+          </a>
+          <form
+            class="site-header__search"
+            action="catalog.html"
+            method="get"
+            role="search"
+          >
+            <input
+              class="site-header__search-input"
+              type="search"
+              name="q"
+              placeholder="Например: протеин"
+              aria-label="Поиск товаров"
+            />
+            <button
+              class="site-header__search-btn button button--primary"
+              type="submit"
+            >
+              Найти
+            </button>
+          </form>
+          <div class="site-header__actions">
+            <div class="site-header__contacts">
+              <a class="site-header__phone" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+            </div>
+            <a
+              class="header-action"
+              href="#favorites-modal"
+              aria-label="Избранное"
+              title="Избранное"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+              <span class="header-action__badge">3</span>
+            </a>
+
+            <a
+              class="header-action"
+              href="#account-modal"
+              aria-label="Личный кабинет"
+              title="Личный кабинет"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="catalog.html"
+                >Каталог</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="about.html">O нас</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Каталог</span>
+      </nav>
+
+      <section class="section">
+        <h1 class="section__title">Каталог товаров</h1>
+        <p class="section__text">
+          На этой странице представлен учебный каталог товаров. В дальнейшем
+          здесь будут добавлены фильтры, сортировка и более подробные карточки.
+        </p>
+      </section>
+
+      <section class="catalog-layout">
+        <aside class="catalog-filters">
+          <h2 class="catalog-filters__title">Фильтры</h2>
+
+          <form class="filters-form" action="#" method="get">
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Категория</legend>
+
+              <label class="filters-form__label">
+                <input
+                  class="filters-form__checkbox"
+                  type="checkbox"
+                  name="category"
+                  value="all"
+                />
+                Все товары
+              </label>
+
+              <label class="filters-form__label">
+                <input
+                  class="filters-form__checkbox"
+                  type="checkbox"
+                  name="category"
+                  value="popular"
+                />
+                Популярные
+              </label>
+
+              <label class="filters-form__label">
+                <input
+                  class="filters-form__checkbox"
+                  type="checkbox"
+                  name="category"
+                  value="new"
+                />
+                Новинки
+              </label>
+            </fieldset>
+
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Цена</legend>
+
+              <label class="filters-form__label" for="price-from">От</label>
+              <input
+                class="filters-form__input"
+                id="price-from"
+                name="price-from"
+                type="number"
+                min="0"
+                placeholder="0"
+              />
+
+              <label class="filters-form__label" for="price-to">До</label>
+              <input
+                class="filters-form__input"
+                id="price-to"
+                name="price-to"
+                type="number"
+                min="0"
+                placeholder="5000"
+              />
+            </fieldset>
+
+            <button
+              class="button button--primary filters-form__button"
+              type="submit"
+            >
+              Применить
+            </button>
+          </form>
+        </aside>
+
+        <div class="products-grid">
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/jordan_ball.jpeg" class="product-image" />
+            <h3 class="product-card__title">Баскетбольный мяч - Jordan</h3>
+            <p class="product-card__description">
+              Баксетбольный мяч. Размер: 7. Подходит для корта
+            </p>
+            <p class="product-card__price">Цена: 7 980 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Jor_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/Spalding_ball.jpeg" class="product-image" />
+            <h3 class="product-card__title">Баскетбольный мяч - Spalding</h3>
+            <p class="product-card__description">
+              Баксетбольный мяч. Размер: 7. Подходит для корта и уличного
+              покрытия
+            </p>
+            <p class="product-card__price">Цена: 5 500 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Spal_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/wilson_ball.jpeg" class="product-image" />
+            <h3 class="product-card__title">Баскетбольный мяч - Wilson</h3>
+            <p class="product-card__description">
+              Баксетбольный мяч. Размер: 6,5. Подходит для корта и уличного
+              покрытия
+            </p>
+            <p class="product-card__price">Цена: 6 225 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Wil_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/bag.webp" class="product-image" />
+            <h3 class="product-card__title">Мешок для мячей</h3>
+            <p class="product-card__description">
+              Вместительный мешок для мячей. Хорош для тренировок в зале
+            </p>
+            <p class="product-card__price">Цена: 1 500 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Meshock_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/AirJordan.jpeg" class="product-image" />
+            <h3 class="product-card__title">
+              Мужские кроссовки Jordan 6 Retro
+            </h3>
+            <p class="product-card__description">
+              Кроссовки 6 Retro от Jordan в в уникальной расцветке "Olympic"
+              образца 2024-го года
+            </p>
+            <p class="product-card__price">Цена: 7 550 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Jor6_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/forma.jpeg" class="product-image" />
+            <h3 class="product-card__title">Форма NIKE баскетбольная</h3>
+            <p class="product-card__description">
+              Баскетбольная форма Nike White Black
+            </p>
+            <p class="product-card__price">Цена: 600 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Suit_Nike.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/creatin.jpeg" class="product-image" />
+            <h3 class="product-card__title">Креатин</h3>
+            <p class="product-card__description">Креатин-моногидрат</p>
+            <p class="product-card__price">Цена: 900 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Creatin_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/Protein.jpeg" class="product-image" />
+            <h3 class="product-card__title">Протеин "Whey"</h3>
+            <p class="product-card__description">
+              Протеин белковый со вкусом клубники
+            </p>
+            <p class="product-card__price">Цена: 1000 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Protein_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/gainer.jpeg" class="product-image" />
+            <h3 class="product-card__title">Гейнер "Mass"</h3>
+            <p class="product-card__description">
+              Cпортивная пищевая добавка на основе белково-углеводной смеси
+            </p>
+            <p class="product-card__price">Цена: 600 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Gainer_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/isotonic1.jpeg" class="product-image" />
+            <h3 class="product-card__title">Изотоник "Primeraft"</h3>
+            <p class="product-card__description">
+              Cпециальный спортивный напиток, который помогает организму
+              поддерживать водно-солевой и энергетический баланс во время
+              длительных или интенсивных физических нагрузок
+            </p>
+            <p class="product-card__price">Цена: 500 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="Primeraft1_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/isotonic2.jpeg" class="product-image" />
+            <h3 class="product-card__title">Изотоник "Энергия"</h3>
+            <p class="product-card__description">
+              Cпециальный спортивный напиток, который помогает организму
+              поддерживать водно-солевой и энергетический баланс во время
+              длительных или интенсивных физических нагрузок
+            </p>
+            <p class="product-card__price">Цена: 550 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="isotonic2_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/isotonic3.jpeg" class="product-image" />
+            <h3 class="product-card__title">Изотоник "Forsio"</h3>
+            <p class="product-card__description">
+              Cпециальный спортивный напиток, который помогает организму
+              поддерживать водно-солевой и энергетический баланс во время
+              длительных или интенсивных физических нагрузок
+            </p>
+            <p class="product-card__price">Цена: 600 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="isotonic3_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/napulsnik.jpeg" class="product-image" />
+            <h3 class="product-card__title">Напульсник "NIKE"</h3>
+            <p class="product-card__description">
+              Напульсник помогает снизить нашрузка на вашу кисть и уменьшает
+              риск появления травмы
+            </p>
+            <p class="product-card__price">Цена: 500 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="napulsnik_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/nakolennik.jpeg" class="product-image" />
+            <h3 class="product-card__title">Наколенник ортопедический"</h3>
+            <p class="product-card__description">
+              Наколенник снижает нагрузки на ваши колени и избавляет от ноющей
+              боли
+            </p>
+            <p class="product-card__price">Цена: 700 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="nakolennik_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+          <article class="product-card product-card--featured">
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Добавить в избранное"
+              aria-pressed="false"
+              data-favorite-id="product-1"
+              title="Добавить в избранное"
+            >
+              <svg
+                class="product-card__favorite-icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+            </button>
+            <img src="images/gatorate.jpeg" class="product-image" />
+            <h3 class="product-card__title">
+              Бутылка для питьевой воды "Gatorate"
+            </h3>
+            <p class="product-card__description">
+              Бутылка сделанна из пищевого пластика, которая не вредна вашему
+              организму
+            </p>
+            <p class="product-card__price">Цена: 320 руб.</p>
+            <div class="product-card__actions">
+              <a
+                class="button button--secondary product-card__details"
+                href="BottleGator_product.html"
+              >
+                Подробно
+              </a>
+              <button
+                class="button button--primary product-card__button"
+                type="button"
+                data-product="Баскетбольный мяч Jordan"
+              >
+                Заказать
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- 1. Лого и текст -->
+        <div class="site-footer__col site-footer__col--brand">
+          <a class="site-footer__logo" href="index.html">
+            <img
+              class="site-footer__logo-img"
+              src="images/lOGO.jpeg"
+              width="40"
+              height="40"
+              alt="Логотип ShopChop"
+            />
+            <span class="site-footer__logo-text site-footer__title"
+              >ShopChop</span
+            >
+          </a>
+          <p class="site-footer__slogan">
+            ShopChop интернет-магазин для настоящих баскетболистов: экипировка,
+            инвентарь и спортивное питание с доставкой по России.
+          </p>
+        </div>
+
+        <!-- 2. Разделы -->
+        <div class="site-footer__col site-footer__col--nav">
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__nav">
+            <li><a class="site-footer__link" href="index.html">Главная</a></li>
+            <li>
+              <a class="site-footer__link" href="catalog.html">Каталог</a>
+            </li>
+            <li><a class="site-footer__link" href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Контакты -->
+        <div class="site-footer__col site-footer__col--contacts">
+          <h2 class="site-footer__title">Контакты</h2>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Адрес:</span>
+            <span class="site-footer__address"
+              >ТРК «Европолис», проспект Мира, 211, корпус 2, Москва</span
+            >
+          </p>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Телефон:</span>
+            <span class="site-footer__phone-row">
+              <a class="site-footer__link" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+              <a
+                class="site-footer__phone-info"
+                href="#phone-hours"
+                aria-label="Показать часы работы телефона"
+                title="Когда можно позвонить"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"
+                  />
+                </svg>
+              </a>
+            </span>
+          </p>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--mail"
+              href="mailto:info@shopchop.ru"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.4l8 5 8-5V7H4zm0 2.6V17h16V9.6l-7.45 4.66a1 1 0 0 1-1.1 0L4 9.6z"
+                />
+              </svg>
+              E-mail
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Соцсети -->
+        <div class="site-footer__col site-footer__col--social">
+          <h2 class="site-footer__title">Мы в соцсетях</h2>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--vk"
+              href="https://vk.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M13.16 17.5c-5.1 0-8.02-3.5-8.14-9.32h2.56c.08 4.27 1.98 6.08 3.48 6.45V8.18h2.4v3.68c1.48-.16 3.03-1.85 3.56-3.68h2.4a7.15 7.15 0 0 1-3.28 4.63 7.4 7.4 0 0 1 3.85 4.69h-2.65c-.5-1.76-1.93-3.12-3.88-3.31v3.31h-.3z"
+                />
+              </svg>
+              ВКонтакте
+            </a>
+            <a
+              class="site-footer__social-btn site-footer__social-btn--tg"
+              href="https://t.me/shopchop"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.04 15.47 8.9 19.1c.44 0 .63-.19.86-.41l2.06-1.98 4.27 3.13c.78.43 1.34.2 1.55-.72l2.8-13.1c.25-1.15-.42-1.6-1.17-1.32L2.2 9.9c-1.12.44-1.11 1.07-.19 1.35l4.53 1.42L17.06 6.3c.5-.33.96-.15.58.18z"
+                />
+              </svg>
+              Telegram
+            </a>
+          </div>
+          <p class="site-footer__slogan">Пишите — ответим в рабочее время.</p>
+        </div>
+      </div>
+      <p class="site-footer__text">&copy; 2026 ShopChop. Все права защищены.</p>
+    </footer>
+
+    <!-- Сообщение: часы работы телефона -->
+    <div
+      class="phone-hours"
+      id="phone-hours"
+      role="dialog"
+      aria-labelledby="phone-hours-title"
+    >
+      <a class="phone-hours__overlay" href="#" aria-label="Закрыть"></a>
+
+      <div class="phone-hours__box" role="document">
+        <a class="phone-hours__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="phone-hours__title" id="phone-hours-title">
+          Когда можно позвонить
+        </h2>
+        <p class="phone-hours__text">
+          Пн–Пт: с 9:00 до 20:00<br />
+          Сб–Вс: с 10:00 до 18:00
+        </p>
+        <p class="phone-hours__text">
+          Вне этого времени оставьте заявку через форму — мы перезвоним.
+        </p>
+      </div>
+    </div>
+
+    <!-- Модальное окно: Избранное -->
+    <div
+      class="modal"
+      id="favorites-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="favorites-modal-title"
+    >
+      <a class="modal__overlay" href="#" aria-label="Закрыть"></a>
+      <div class="modal__content" role="document">
+        <a class="modal__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="modal__title" id="favorites-modal-title">Избранное</h2>
+        <p class="modal__text">Товаров в избранном: <strong>3</strong></p>
+        <ul class="favorites-list">
+          <li class="favorites-list__item">
+            <span class="favorites-list__name">Товар 1 — Креатин</span>
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+          <li class="favorites-list__item">
+            <span class="favorites-list__name">Товар 2 — Протеин</span>
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+          <li class="favorites-list__item">
+            <span class="favorites-list__name"
+              >Товар 4 — Изотоник "Primeraft"</span
+            >
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Модальное окно: Личный кабинет -->
+    <div
+      class="modal"
+      id="account-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="account-modal-title"
+    >
+      <a class="modal__overlay" href="#" aria-label="Закрыть"></a>
+      <div class="modal__content" role="document">
+        <a class="modal__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="modal__title" id="account-modal-title">Личный кабинет</h2>
+
+        <form class="login-form" action="#" method="post">
+          <div class="login-form__field">
+            <label class="login-form__label" for="login-email"
+              >Логин (e-mail)</label
+            >
+            <input
+              class="login-form__input"
+              id="login-email"
+              name="login"
+              type="email"
+              autocomplete="username"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="login-form__field">
+            <label class="login-form__label" for="login-password">Пароль</label>
+            <input
+              class="login-form__input"
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              minlength="6"
+              placeholder="Минимум 6 символов"
+            />
+          </div>
+
+          <div class="login-form__actions">
+            <button class="button button--primary" type="submit">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Окно поддержки -->
+    <div
+      class="popup"
+      id="support-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="support-drawer-title"
+    >
+      <a class="popup__overlay" href="#" aria-label="Закрыть"></a>
+
+      <div class="popup__panel" role="document">
+        <a class="popup__close" href="#" aria-label="Закрыть">&times;</a>
+
+        <h2 class="popup__title" id="support-drawer-title">Поддержка</h2>
+
+        <hr class="popup__divider" />
+
+        <!-- Написать консультанту -->
+        <form class="popup__form" action="#" method="post">
+          <h3 class="popup__subtitle">Написать консультанту</h3>
+
+          <div class="popup__field">
+            <label class="popup__label" for="popup-name">Ваше имя</label>
+            <input
+              class="popup__input"
+              id="popup-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              placeholder="Иван"
+            />
+          </div>
+
+          <div class="popup__field">
+            <label class="popup__label" for="popup-contact"
+              >Телефон или e-mail</label
+            >
+            <input
+              class="popup__input"
+              id="popup-contact"
+              name="contact"
+              type="text"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="popup__field">
+            <label class="popup__label" for="popup-message">Сообщение</label>
+            <textarea
+              class="popup__input popup__textarea"
+              id="popup-message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Чем можем помочь?"
+            ></textarea>
+          </div>
+
+          <button class="button button--primary" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <a href="#top" class="btn-top" aria-label="Вернуться наверх">Up</a>
+
+    <a
+      href="#support-drawer"
+      class="support-fab"
+      aria-label="Написать консультанту"
+    >
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <!-- Иконка чата -->
+        <path
+          d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+        />
+      </svg>
+    </a>
+  </body>
+</html>

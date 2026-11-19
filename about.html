@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="О магазине ShopChop — учебный интернет-магазин для баскетболистов."
+    />
+    <title>О нас — ShopChop</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__left">
+          <a class="site-header__logo" href="index.html">
+            <img src="images/lOGO.jpeg" alt="" class="site-header__logo-img" />
+            <span class="site-header__logo-text">ShopChop</span>
+          </a>
+          <form
+            class="site-header__search"
+            action="catalog.html"
+            method="get"
+            role="search"
+          >
+            <input
+              class="site-header__search-input"
+              type="search"
+              name="q"
+              placeholder="Например: протеин"
+              aria-label="Поиск товаров"
+            />
+            <button
+              class="site-header__search-btn button button--primary"
+              type="submit"
+            >
+              Найти
+            </button>
+          </form>
+          <div class="site-header__actions">
+            <div class="site-header__contacts">
+              <a class="site-header__phone" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+            </div>
+            <a
+              class="header-action"
+              href="#favorites-modal"
+              aria-label="Избранное"
+              title="Избранное"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s-7.5-4.9-9.6-9.2C.9 8.6 2.6 5.2 6 4.6c2-.4 3.9.5 5 2.1 1.1-1.6 3-2.5 5-2.1 3.4.6 5.1 4 3.6 7.2C19.5 16.1 12 21 12 21z"
+                />
+              </svg>
+              <span class="header-action__badge">3</span>
+            </a>
+
+            <a
+              class="header-action"
+              href="#account-modal"
+              aria-label="Личный кабинет"
+              title="Личный кабинет"
+            >
+              <svg
+                class="header-action__icon"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="about.html"
+                >O нас</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">О нас</span>
+      </nav>
+
+      <!-- Hero -->
+      <section class="hero">
+        <h1 class="hero__title">О магазине ShopChop</h1>
+        <p class="hero__text">
+          ShopChop — интернет-магазин для настоящих баскетболистов. Мы собираем
+          всё для игры: от сеток и мячей до спортивного питания, и доставляем
+          заказы по всей России.
+        </p>
+        <a class="button button--primary" href="catalog.html"
+          >Перейти в каталог</a
+        >
+      </section>
+
+      <!-- История -->
+      <section class="section">
+        <h2 class="section__title">Наша история</h2>
+        <p class="section__text">
+          Проект вырос из маленькой идеи 4-ех человек: мы хотели показать, как
+          может выглядеть современный магазин для игроков в баскетбол. Сначала
+          это был небольшой каталог, а сегодня — полноценный сайт с фильтрами,
+          отзывами, избранным и формой заявки.
+        </p>
+        <p class="section__text">
+          Мы работаем с поставщиками из США, Канады и других стран, поэтому в
+          каталоге появляются товары, которые сложно найти в обычных магазинах.
+        </p>
+      </section>
+
+      <!-- Преимущества -->
+      <section class="section" id="advantages">
+        <h2 class="section__title">Почему выбирают нас</h2>
+        <ul class="advantages-list">
+          <li class="advantages-list__item">Быстрая доставка по России</li>
+          <li class="advantages-list__item">
+            Большой каталог товаров для баскетбола
+          </li>
+          <li class="advantages-list__item">
+            Работа с поставщиками из США, Канады и других стран
+          </li>
+          <li class="advantages-list__item">
+            Консультация по подбору питания и экипировки
+          </li>
+          <li class="advantages-list__item">
+            Довольные пользователи и покупатели
+          </li>
+        </ul>
+      </section>
+
+      <!-- Цифры -->
+      <section class="section">
+        <h2 class="section__title">Мы в цифрах</h2>
+        <div class="products-grid">
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">5 лет</h3>
+            <p class="product-card__description">на рынке спортивных товаров</p>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">10 000+</h3>
+            <p class="product-card__description">выполненных заказов</p>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">3 страны</h3>
+            <p class="product-card__description">
+              прямые поставки: США, Канада, Европа
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Команда -->
+      <section class="section">
+        <h2 class="section__title">Наша команда</h2>
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <strong>Алексей</strong> — основатель, отвечает за ассортимент и
+            поставки.
+            <a class="site-header__phone" href="tel:+74956468789"
+              >(+7 (495) 646-87-89)</a
+            >
+          </li>
+          <li class="contacts-list__item">
+            <strong>Мария</strong> — консультант по спортивному питанию.
+            <a class="site-header__phone" href="tel:+74953426780"
+              >(+7 (495) 342-67-80)</a
+            >
+          </li>
+          <li class="contacts-list__item">
+            <strong>Игорь</strong> — логистика и доставка.
+            <a class="site-header__phone" href="tel:+74955122730"
+              >(+7 (495) 512-27-30)</a
+            >
+          </li>
+          <li class="contacts-list__item">
+            <strong>Ольга</strong> — поддержка клиентов и отзывы.
+            <a class="site-header__phone" href="tel:+79651922163"
+              >+7 (965) 192-21-63</a
+            >
+          </li>
+        </ul>
+      </section>
+      <!-- Ценности -->
+      <section class="section" id="values">
+        <h2 class="section__title">Наши ценности</h2>
+        <p class="section__subtitle">То, на чём держится ShopChop</p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3 class="info-card__title">Честный подбор</h3>
+            <p class="info-card__text">
+              Мы не продаём «всё подряд». Если товар не подходит под задачу
+              игрока — честно об этом скажем и предложим альтернативу.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Проверенные поставщики</h3>
+            <p class="info-card__text">
+              Работаем напрямую с магазинами США, Канады и Европы. Каждая партия
+              проходит проверку на подлинность.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Забота после покупки</h3>
+            <p class="info-card__text">
+              Помогаем с размером, обменом и уходом за экипировкой — не только
+              до оплаты, но и после получения заказа.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Поддержка детского спорта</h3>
+            <p class="info-card__text">
+              Даём скидки детским секциям и клубам: чем больше детей играет в
+              баскетбол, тем лучше.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- Мини-FAQ о магазине -->
+      <section class="section" id="about-faq">
+        <h2 class="section__title">Вопросы о магазине</h2>
+        <p class="section__subtitle">Коротко о главном</p>
+
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              ShopChop — это официальный магазин брендов?
+            </summary>
+            <p class="faq-item__answer">
+              Да - это официальный магазин. Мы являемся официальным
+              представителем Nike, Jordan, Spalding и других брендов —
+              ассортимент и цены приведены в соответиствии с требованиями.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Откуда берутся товары в каталоге?
+            </summary>
+            <p class="faq-item__answer">
+              Модели и характеристики взяты из открытых источников, а описания и
+              цены составлены на основе наших источников информации. Магазин
+              осуществляет реальный магазин.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Можно ли заказать товар прямо с этой страницы?
+            </summary>
+            <p class="faq-item__answer">
+              На главной странице есть кнопка «Заказать» в карточках товаров —
+              она открывает демонстрационную форму заявки. На странице «О нас»
+              такой формы нет, но можно перейти в
+              <a href="catalog.html">каталог</a> или
+              <a href="index.html#popular">на главную</a>.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              Как связаться с командой?
+            </summary>
+            <p class="faq-item__answer">
+              Телефоны каждого участника указаны в блоке «Наша команда» выше.
+              Общие контакты — на странице
+              <a href="contacts.html">«Контакты»</a>.
+            </p>
+          </details>
+        </div>
+      </section>
+      <!-- Призыв к действию -->
+      <aside class="aside-info">
+        <h2 class="aside-info__title">Остались вопросы?</h2>
+        <p class="aside-info__text">
+          Напишите нам через форму обратной связи или позвоните —
+          проконсультируем по товарам, доставке и подбору питания.
+        </p>
+        <p class="aside-info__text">
+          <a class="button button--primary" href="contacts.html"
+            >Связаться с нами</a
+          >
+        </p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- 1. Лого и текст -->
+        <div class="site-footer__col site-footer__col--brand">
+          <a class="site-footer__logo" href="index.html">
+            <img
+              class="site-footer__logo-img"
+              src="images/lOGO.jpeg"
+              width="40"
+              height="40"
+              alt="Логотип ShopChop"
+            />
+            <span class="site-footer__logo-text site-footer__title"
+              >ShopChop</span
+            >
+          </a>
+          <p class="site-footer__slogan">
+            ShopChop интернет-магазин для настоящих баскетболистов: экипировка,
+            инвентарь и спортивное питание с доставкой по России.
+          </p>
+        </div>
+
+        <!-- 2. Разделы -->
+        <div class="site-footer__col site-footer__col--nav">
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__nav">
+            <li><a class="site-footer__link" href="index.html">Главная</a></li>
+            <li>
+              <a class="site-footer__link" href="catalog.html">Каталог</a>
+            </li>
+            <li><a class="site-footer__link" href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Контакты -->
+        <div class="site-footer__col site-footer__col--contacts">
+          <h2 class="site-footer__title">Контакты</h2>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Адрес:</span>
+            <span class="site-footer__address"
+              >ТРК «Европолис», проспект Мира, 211, корпус 2, Москва</span
+            >
+          </p>
+          <p class="site-footer__contact">
+            <span class="site-footer__contact-label">Телефон:</span>
+            <span class="site-footer__phone-row">
+              <a class="site-footer__link" href="tel:+74956468780"
+                >+7 (495) 646-87-80</a
+              >
+              <a
+                class="site-footer__phone-info"
+                href="#phone-hours"
+                aria-label="Показать часы работы телефона"
+                title="Когда можно позвонить"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1l-2.22 2.2z"
+                  />
+                </svg>
+              </a>
+            </span>
+          </p>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--mail"
+              href="mailto:info@shopchop.ru"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.4l8 5 8-5V7H4zm0 2.6V17h16V9.6l-7.45 4.66a1 1 0 0 1-1.1 0L4 9.6z"
+                />
+              </svg>
+              E-mail
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Соцсети -->
+        <div class="site-footer__col site-footer__col--social">
+          <h2 class="site-footer__title">Мы в соцсетях</h2>
+          <div class="site-footer__social">
+            <a
+              class="site-footer__social-btn site-footer__social-btn--vk"
+              href="https://vk.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M13.16 17.5c-5.1 0-8.02-3.5-8.14-9.32h2.56c.08 4.27 1.98 6.08 3.48 6.45V8.18h2.4v3.68c1.48-.16 3.03-1.85 3.56-3.68h2.4a7.15 7.15 0 0 1-3.28 4.63 7.4 7.4 0 0 1 3.85 4.69h-2.65c-.5-1.76-1.93-3.12-3.88-3.31v3.31h-.3z"
+                />
+              </svg>
+              ВКонтакте
+            </a>
+            <a
+              class="site-footer__social-btn site-footer__social-btn--tg"
+              href="https://t.me/shopchop"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.04 15.47 8.9 19.1c.44 0 .63-.19.86-.41l2.06-1.98 4.27 3.13c.78.43 1.34.2 1.55-.72l2.8-13.1c.25-1.15-.42-1.6-1.17-1.32L2.2 9.9c-1.12.44-1.11 1.07-.19 1.35l4.53 1.42L17.06 6.3c.5-.33.96-.15.58.18z"
+                />
+              </svg>
+              Telegram
+            </a>
+          </div>
+          <p class="site-footer__slogan">Пишите — ответим в рабочее время.</p>
+        </div>
+      </div>
+      <p class="site-footer__text">&copy; 2026 ShopChop. Все права защищены.</p>
+    </footer>
+
+    <!-- Сообщение: часы работы телефона -->
+    <div
+      class="phone-hours"
+      id="phone-hours"
+      role="dialog"
+      aria-labelledby="phone-hours-title"
+    >
+      <a class="phone-hours__overlay" href="#" aria-label="Закрыть"></a>
+
+      <div class="phone-hours__box" role="document">
+        <a class="phone-hours__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="phone-hours__title" id="phone-hours-title">
+          Когда можно позвонить
+        </h2>
+        <p class="phone-hours__text">
+          Пн–Пт: с 9:00 до 20:00<br />
+          Сб–Вс: с 10:00 до 18:00
+        </p>
+        <p class="phone-hours__text">
+          Вне этого времени оставьте заявку через форму — мы перезвоним.
+        </p>
+      </div>
+    </div>
+
+    <!-- Модальное окно: Избранное -->
+    <div
+      class="modal"
+      id="favorites-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="favorites-modal-title"
+    >
+      <a class="modal__overlay" href="#" aria-label="Закрыть"></a>
+      <div class="modal__content" role="document">
+        <a class="modal__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="modal__title" id="favorites-modal-title">Избранное</h2>
+        <p class="modal__text">Товаров в избранном: <strong>3</strong></p>
+        <ul class="favorites-list">
+          <li class="favorites-list__item">
+            <span class="favorites-list__name">Товар 1 — Креатин</span>
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+          <li class="favorites-list__item">
+            <span class="favorites-list__name">Товар 2 — Протеин</span>
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+          <li class="favorites-list__item">
+            <span class="favorites-list__name"
+              >Товар 4 — Изотоник "Primeraft"</span
+            >
+            <a class="favorites-list__remove" href="#">Удалить</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Модальное окно: Личный кабинет -->
+    <div
+      class="modal"
+      id="account-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="account-modal-title"
+    >
+      <a class="modal__overlay" href="#" aria-label="Закрыть"></a>
+      <div class="modal__content" role="document">
+        <a class="modal__close" href="#" aria-label="Закрыть">&times;</a>
+        <h2 class="modal__title" id="account-modal-title">Личный кабинет</h2>
+
+        <form class="login-form" action="#" method="post">
+          <div class="login-form__field">
+            <label class="login-form__label" for="login-email"
+              >Логин (e-mail)</label
+            >
+            <input
+              class="login-form__input"
+              id="login-email"
+              name="login"
+              type="email"
+              autocomplete="username"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="login-form__field">
+            <label class="login-form__label" for="login-password">Пароль</label>
+            <input
+              class="login-form__input"
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              minlength="6"
+              placeholder="Минимум 6 символов"
+            />
+          </div>
+
+          <div class="login-form__actions">
+            <button class="button button--primary" type="submit">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Окно поддержки -->
+    <div
+      class="popup"
+      id="support-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="support-drawer-title"
+    >
+      <a class="popup__overlay" href="#" aria-label="Закрыть"></a>
+
+      <div class="popup__panel" role="document">
+        <a class="popup__close" href="#" aria-label="Закрыть">&times;</a>
+
+        <h2 class="popup__title" id="support-drawer-title">Поддержка</h2>
+
+        <hr class="popup__divider" />
+
+        <!-- Написать консультанту -->
+        <form class="popup__form" action="#" method="post">
+          <h3 class="popup__subtitle">Написать консультанту</h3>
+
+          <div class="popup__field">
+            <label class="popup__label" for="popup-name">Ваше имя</label>
+            <input
+              class="popup__input"
+              id="popup-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              placeholder="Иван"
+            />
+          </div>
+
+          <div class="popup__field">
+            <label class="popup__label" for="popup-contact"
+              >Телефон или e-mail</label
+            >
+            <input
+              class="popup__input"
+              id="popup-contact"
+              name="contact"
+              type="text"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="popup__field">
+            <label class="popup__label" for="popup-message">Сообщение</label>
+            <textarea
+              class="popup__input popup__textarea"
+              id="popup-message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Чем можем помочь?"
+            ></textarea>
+          </div>
+
+          <button class="button button--primary" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <a href="#top" class="btn-top" aria-label="Вернуться наверх">Up</a>
+
+    <a
+      href="#support-drawer"
+      class="support-fab"
+      aria-label="Написать консультанту"
+    >
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+        <!-- Иконка чата -->
+        <path
+          d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"
+        />
+      </svg>
+    </a>
+  </body>
+</html>
